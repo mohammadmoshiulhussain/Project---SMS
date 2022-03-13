@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        return view('admin.user.add');
+    }
+
+    public function manage()
+    {
+        return view('admin.user.manage');
+    }
+
+    public function addteacher()
+    {
+        return view('admin.user.addteacher');
+    }
+
+    public function manageteacher()
+    {
+        return view('admin.user.manageteacher');
+    }
+}
