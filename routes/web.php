@@ -28,3 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/add-user',[UserController
 Route::middleware(['auth:sanctum', 'verified'])->get('/manage-user',[UserController::class,'manage'])->name('manage-user');
 Route::middleware(['auth:sanctum', 'verified'])->get('/add-teacher',[UserController::class,'addteacher'])->name('add-teacher');
 Route::middleware(['auth:sanctum', 'verified'])->get('/manage-teacher',[UserController::class,'manageteacher'])->name('manage-teacher');
+Route::middleware(['auth:sanctum', 'verified'])->post('/new-user',[UserController::class,'create'])->name('new-user');
+Route::middleware(['auth:sanctum', 'verified'])->get('/edit-user/{id}',[UserController::class,'edit'])->name('edit-user');
+Route::middleware(['auth:sanctum', 'verified'])->get('/delete-user/{id}',[UserController::class,'delete'])->name('delete-user');
+Route::middleware(['auth:sanctum', 'verified'])->post('/update-user/{id}',[UserController::class,'update'])->name('update-user');
